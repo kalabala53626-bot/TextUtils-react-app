@@ -67,10 +67,9 @@ function App() {
 
 
   
-
-  
   return (
-    <Router>
+    <>
+    
       <Navbar
         title="Textutils"
         titleAbout="About Us"
@@ -82,12 +81,32 @@ function App() {
       />
       <Alert alert={alert} />
 
-      <Routes>
-        <Route exact path="/" element={<TextForm heading="Type Something Here:" mode={mode} showAlart={showAlart} />} />
-        <Route exact path="/About" element={<About mode={mode} />} />
-      </Routes>
-    </Router>
+     
+       <TextForm heading="Type Something Here:" mode={mode} showAlart={showAlart} />
+       
+    </>   
+      
   );
+  
+  // return (
+  //   <Router>
+  //     <Navbar
+  //       title="Textutils"
+  //       titleAbout="About Us"
+  //       mode={mode}
+  //       togglemode={togglemode}
+  //       red_color={red_color}
+  //       green_color={green_color}
+  //       Yellow_color={Yellow_color}
+  //     />
+  //     <Alert alert={alert} />
+
+  //     <Routes>
+  //       <Route exact path="/" element={<TextForm heading="Type Something Here:" mode={mode} showAlart={showAlart} />} />
+  //       <Route exact path="/About" element={<About mode={mode} />} />
+  //     </Routes>
+  //   </Router>
+  // );
 }
 
 export default App;

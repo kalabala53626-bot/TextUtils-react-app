@@ -1,10 +1,11 @@
 
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 function Navbar(props) {
   return (
     <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode} px-3`}>
-      <Link className="navbar-brand" to="/">{props.title}</Link>
+      {/* <Link className="navbar-brand" to="/">{props.title}</Link> */}
+      <a className="navbar-brand" href="#">{props.title}</a>
       <button
         className="navbar-toggler"
         type="button"
@@ -16,15 +17,14 @@ function Navbar(props) {
       >
         <span className="navbar-toggler-icon"></span>
       </button>
-
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
-            <Link className="nav-link" to="/">Home</Link>
+            {/* <Link className="nav-link" to="/">Home</Link> */}
+            <a className="nav-link" href="#">Home</a>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/about">{props.titleAbout}</Link>
-            
+            {/* <Link className="nav-link" to="/about">{props.titleAbout}</Link> */}
           </li>
         </ul>
         <div className={`form-check form-switch ms-auto text-${props.mode==='light'? 'dark': 'light'} `}>
